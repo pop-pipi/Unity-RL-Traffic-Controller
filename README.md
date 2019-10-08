@@ -3,3 +3,4 @@ Unity based traffic simulator. Implements a reinforcement learning agent to cont
 
 ### Prereqs
 - Unity
+- Git Large File Storage (Git LFS) (https://git-lfs.github.com/)
