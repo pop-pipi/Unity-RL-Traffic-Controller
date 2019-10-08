@@ -3,4 +3,11 @@ Unity based traffic simulator. Implements a reinforcement learning agent to cont
 
 ### Prereqs
 - Unity
-- Git Large File Storage (Git LFS) (https://git-lfs.github.com/)
+- Git Large File Storage (Git LFS) (https://github.com/git-lfs/git-lfs/wiki/Installation)
+
+### Installation
+- Clone the git repo to a local directory
+- 
+
+### Contributing Notes
+- Contributes must use Git LFS when commiting to this repo, running this command in the project directory `git lfs install --local` (note if you have installed Git LFS on your OS previously using `git lfs install` then this step is not required)
