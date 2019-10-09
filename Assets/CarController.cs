@@ -24,7 +24,7 @@ public class CarController : MonoBehaviour
         if(speed < IdealSpeed())
         {
             SpeedUp();
-        } else
+        } else if (speed > IdealSpeed())
         {
             SlowDown();
         }
