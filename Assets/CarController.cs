@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 
 public class CarController : MonoBehaviour
 {
@@ -11,84 +12,90 @@ public class CarController : MonoBehaviour
 
     private int nextWaypointIndex;
 
-    // Start is called before the first frame update
     void Start()
     {
-        speed = maxSpeed;
+        FaceInitialWaypoint();
+        speed = IdealSpeed();
     }
 
     void Update()
     {
-        ReviewFrontSensorDistance();
+        // Adjust speed to ideal speed
+        if(speed < IdealSpeed())
+        {
+            SpeedUp();
+        } else
+        {
+            SlowDown();
+        }
+
         GoToNextWaypoint();
     }
 
-    private void ReviewFrontSensorDistance()
+    // Retrieve closest relevant collider (Next vehicle or assigned traffic light)
+    // returns empty RaycastHit struct if no obstacle found
+    private RaycastHit GetReferenceToNextObstacle()
     {
         LayerMask mask = 1 << 9; //Raycast layer
         // Cast a ray infront of vehicle, to detect if possible collision may occur in future
-        // We care about two collisions; Against another vehicle, and against yellow/red traffic light
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.TransformDirection(Vector3.forward), Mathf.Infinity, mask);
+        // Only consider two possible collisions; Against another vehicle, and against yellow/red traffic light
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, Mathf.Infinity, mask).OrderBy(h => h.distance).ToArray();
         RaycastHit hit = new RaycastHit();
 
-        // Retrieve first relevant collider
+        // Retrieve closest relevant collider (Next vehicle or assigned traffic light)
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].collider.gameObject.CompareTag("Vehicle"))
+            if (hits[i].collider.gameObject.CompareTag("Vehicle") ||
+                ReferenceEquals(hits[i].collider.gameObject, path.trafficLight.gameObject))
             {
-                Debug.Log("Next object is car");
-                hit = hits[i];
-                break;
-            }
-            else if (ReferenceEquals(hits[i].collider.gameObject, path.trafficLight.gameObject))
-            {
-                Debug.Log("Next object is traffic light");
                 hit = hits[i];
                 break;
             }
         }
 
-        if (hit.collider != null)
-        {
-            Debug.Log(hit.distance);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.magenta);
+        return hit;
+    }
 
-            // If vehicle ahead, retrieve it's speed
-            // TODO: This doesn't account for direction, and assumes vehicle ahead
-            // is travelling in the same direction, although this should have minimal,
-            // if any, impact. This means we can still use the Unity method
-            // Vector3.MoveTowards for a more succinct waypoint system.
-            float distanceToObstacle = hit.distance;
+    // Calculates desired speed from distance to the next obstacle (minus ideal following
+    // space)
+    private float IdealSpeed()
+    {
+        RaycastHit hit = GetReferenceToNextObstacle();
+        if(hit.collider != null)
+        {
             float objectAheadSpeed = 0f;
             if (hit.collider.gameObject.CompareTag("Vehicle"))
             {
                 objectAheadSpeed = hit.collider.gameObject.GetComponent<CarController>().speed;
             }
 
-            // Calc Safe Following Distance
-            // Take difference of minimum stopping distances for self and vehicle ahead
-            float distToStop = (float)-System.Math.Pow(speed, 2) / (2 * -acceleration);
-            float carAheadDistToStop = (float)-System.Math.Pow(objectAheadSpeed, 2) / (2 * -acceleration);
-            float safeFollowingDistance = distToStop - carAheadDistToStop;
+            Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.magenta);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * (SafeFollowingDistance(objectAheadSpeed) + idealSpaceToCarAhead), Color.blue);
 
-            // Debug line
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * safeFollowingDistance, Color.blue);
-
-            // Adjust speed to maintain, at minimum, a safe following distance,
-            // accounting for ideal spacing between cars.
-            if (distanceToObstacle < (safeFollowingDistance + idealSpaceToCarAhead))
-            {
-                SlowDown();
-            }
-            else
-            {
-                SpeedUp();
-            }
-        }
-        else // Where nothing infront of vehicle, it is free to accelerate
+            // safe initial speed to stop within an allocated distance:
+            // speed = sqroot(2 * acceleration * distance)
+            float safeInitialSpeed = Mathf.Sqrt(2 * acceleration * Mathf.Max(0,hit.distance-idealSpaceToCarAhead));
+            return Mathf.Min(safeInitialSpeed, maxSpeed);
+        } else
         {
-            SpeedUp();
+            return maxSpeed;
         }
+    }
+
+    private float SafeFollowingDistance(float nextObstacleSpeed)
+    {
+        float distToStop = (float)-System.Math.Pow(speed, 2) / (2 * -acceleration);
+        float carAheadDistToStop = (float)-System.Math.Pow(nextObstacleSpeed, 2) / (2 * -acceleration);
+        return distToStop - carAheadDistToStop;
+    }
+
+    // Face first waypoint of path, while keeping rotation parallel with ground plane
+    private void FaceInitialWaypoint()
+    {
+        Vector3 initialWaypointPos = path.waypoints[0].position;
+        initialWaypointPos.y = transform.position.y;
+        transform.LookAt(initialWaypointPos);
+
     }
 
 	private void GoToNextWaypoint()
@@ -109,9 +116,9 @@ public class CarController : MonoBehaviour
 
         // Rotate car towards direction of movement
         Vector3 targetDir = target.position - transform.position;
+        targetDir.y = 0; // lock rotation
         Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        Debug.DrawRay(transform.position, newDir, Color.red);
-        transform.rotation = Quaternion.LookRotation(newDir); 
+        transform.rotation = Quaternion.LookRotation(newDir);
 
         // If the position of the waypoint and car are approximately equal, increment waypoint
         if (Vector3.Distance(transform.position, target.position) < 0.001f)

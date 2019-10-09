@@ -13,6 +13,7 @@ public class CarSpawner : MonoBehaviour
 
     void Start()
     {
+        // Spawn cars repeatedly
         InvokeRepeating("SpawnCar", 1, spawnRate);
     }
 
@@ -38,7 +39,7 @@ public class CarSpawner : MonoBehaviour
         int spawnIndex = rnd.Next(openPaths.Count);
         Path path = (Path) openPaths[spawnIndex];
 
-        // Pick car and set parameters
+        // Instantiate car and set parameters
         var car = Instantiate(carPrefab, path.transform.position, Quaternion.identity);
         CarController carController = car.GetComponent<CarController>();
         carController.acceleration = carAcceleration;
