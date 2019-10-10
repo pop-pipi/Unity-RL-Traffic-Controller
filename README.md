@@ -22,3 +22,5 @@ Unity based traffic simulator. Implements a reinforcement learning agent to cont
 ### Contributing Notes
 - Contributes must use Git LFS when commiting to this repo, running this command in the project directory `git lfs install --local` (note if you have installed Git LFS on your OS previously using `git lfs install` then this step is not required)
 
+### Other Tips
+- The powerpoint file included in the project was used to create the intersection image. Feel free to play around with it and create other intersections (Please note adding Paths with waypoints, traffic lights, etc. is not documented - although there may be some minor direct in the source code. Refer to the Sample Scene for how the different components should be laid out)
