@@ -19,8 +19,9 @@ Unity based traffic simulator. A learning environment for a reinforcement learni
 - This scene comes with 8 pre-defined traffic configurations, tap a number on your keyboard to flick through each one
 - To change paramters such as car spawn rate, acceleration and max speed, you may edit these from the 'Car Spawner' asset located in the hierarchy. 
 
-### Contributing Notes
-- Contributes must use Git LFS when commiting to this repo, running this command in the project directory `git lfs install --local` (note if you have installed Git LFS on your OS previously using `git lfs install` then this step is not required)
+## Notes
+### Contributers
+- Contributers must use Git LFS when commiting to this repo, running this command in the project directory `git lfs install --local` (note if you have installed Git LFS on your OS previously using `git lfs install` then this step is not required)
 
 ### Other Tips
 - The powerpoint file included in the project was used to create the intersection image. Feel free to play around with it and create other intersections (Please note adding Paths with waypoints, traffic lights, etc. is not documented - although there may be some minor direct in the source code. Refer to the Sample Scene for how the different components should be laid out)
