@@ -1,5 +1,5 @@
 # Unity-RL-Traffic-Controller
-Unity based traffic simulator. Implements a reinforcement learning agent to controller traffic intersection to maximise traffic flow.
+Unity based traffic simulator. A learning environment for a reinforcement learning agent to control traffic lights at a single intersection, training to maximise traffic flow.
 
 ### Requirements
 * Unity (Project requires version 2018.4.10f1 or above)
