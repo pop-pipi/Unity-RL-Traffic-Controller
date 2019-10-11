@@ -110,3 +110,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#Virtualenv Ignore
+venv/
