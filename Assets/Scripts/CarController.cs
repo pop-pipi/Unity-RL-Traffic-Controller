@@ -18,7 +18,7 @@ public class CarController : MonoBehaviour
         speed = IdealSpeed();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float idealSpeed = IdealSpeed();
         // If required, adjust speed to ideal speed

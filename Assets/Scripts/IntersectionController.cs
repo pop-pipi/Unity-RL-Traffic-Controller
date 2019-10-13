@@ -25,23 +25,6 @@ public class IntersectionController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        for (int i = 0; i < configurations.Length; i++)
-        {
-            if(Input.anyKeyDown) {
-                if (Input.inputString == i.ToString())
-                {
-                    if (!changingConfigurations) {
-                        SwitchTrafficConfiguration(i);
-                    }
-                }
-            }
-        } */
-    }
-
     public void SwitchTrafficConfiguration(int index)
     {
         if (!changingConfigurations && currentConfig != index)

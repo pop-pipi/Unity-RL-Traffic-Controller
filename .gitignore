@@ -1,3 +1,8 @@
+#ML Agents  Tensorflow Model  Ignore
+/models
+/summaries
+/envs
+
 # Unity Ignore
 # Retrieved from https://github.com/github/gitignore/blob/master/Unity.gitignore 
 #
