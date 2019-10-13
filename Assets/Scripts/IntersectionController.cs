@@ -10,6 +10,10 @@ public class IntersectionController : MonoBehaviour
     public TrafficConfiguration[] configurations;
     public ArrayList cars = new ArrayList();
 
+    // ml agents stuff
+    // private bool changingConfigurations;
+    // public int currentConfig;
+
     // Start is called before the first frame update
     // Set all traffic light yellow signal lengths
     void Start()
@@ -55,6 +59,38 @@ public class IntersectionController : MonoBehaviour
             }
         }
     }
+
+    // TODO: ml agents stuff
+    // public void SwitchTrafficConfiguration(int index)
+    // {
+    //     if (!changingConfigurations && currentConfig != index)
+    //     {
+    //         changingConfigurations = true;
+    //         currentConfig = index;
+
+    //         // Close traffic in all lanes
+    //         foreach (TrafficConfiguration configuration in configurations)
+    //         {
+    //             foreach (TrafficLight trafficLight in configuration.trafficLights)
+    //             {
+    //                 trafficLight.CloseTraffic();
+    //             }
+    //         }
+
+    //         // Open traffic in lanes selected by User
+    //         foreach (TrafficLight trafficLight in configurations[index].trafficLights)
+    //         {
+    //             trafficLight.Invoke("OpenTraffic", timeBetweenConfigs);
+    //             Invoke("FinishedChangingLanes", timeBetweenConfigs);
+    //         }
+    //         return;
+    //     }
+    // }
+
+    // private void FinishedChangingLanes()
+    // {
+    //     changingConfigurations = false;
+    // }
 
     public int getQueueLength(){
         int waitingcars = 0;
