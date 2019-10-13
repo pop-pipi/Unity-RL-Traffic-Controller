@@ -125,6 +125,7 @@ public class CarController : MonoBehaviour
 		if (nextWaypointIndex >= path.waypoints.Length)
 		{
             Destroy(gameObject);
+            path.noCars -= 1;
 			return;
 		}
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
+    public IntersectionAgent agent;
+
     public GameObject carPrefab;
     public TrafficPath[] paths;
     public float spawnRate; // Seconds between each car spawn
@@ -49,6 +51,9 @@ public class CarSpawner : MonoBehaviour
 
         // TODO: Review ADD TO OBS VALUE
         path.noCars += 1;
+
+        // Request decision to be made
+        agent.RequestDecision();
     }
 
 }

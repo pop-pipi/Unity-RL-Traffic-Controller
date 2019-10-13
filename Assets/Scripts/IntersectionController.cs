@@ -12,9 +12,13 @@ public class IntersectionController : MonoBehaviour
     private bool changingConfigurations;
     public int currentConfig;
 
+    private float startedCurrentConfig;
+
     // Set all traffic light yellow signal lengths
     void Start()
     {
+        startedCurrentConfig = Time.time;
+
         for (int i = 0; i < configurations.Length; i++)
         {
             TrafficConfiguration config = configurations[i];
@@ -45,14 +49,20 @@ public class IntersectionController : MonoBehaviour
             foreach (TrafficLight trafficLight in configurations[index].trafficLights)
             {
                 trafficLight.Invoke("OpenTraffic", timeBetweenConfigs);
-                Invoke("FinishedChangingLanes", timeBetweenConfigs);
+                Invoke("FinishedChangingConfig", timeBetweenConfigs);
             }
             return;
         }
     }
 
-    private void FinishedChangingLanes()
+    private void FinishedChangingConfig()
     {
         changingConfigurations = false;
+        startedCurrentConfig = Time.time;
+    }
+
+    public float getTimeInCurrentConfig()
+    {
+        return Time.time - startedCurrentConfig;
     }
 }
