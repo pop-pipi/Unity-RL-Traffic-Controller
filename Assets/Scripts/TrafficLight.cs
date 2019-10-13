@@ -20,11 +20,14 @@ public class TrafficLight : MonoBehaviour
 
     public void CloseTraffic()
     {
-        signal = TrafficSignal.Yellow;
-        GetComponent<Renderer>().material = yellowLight;
-        gameObject.layer = 9; // Raycast layer
-        Invoke("SwitchToRed", yellowSignalTimer);
+        if(signal == TrafficSignal.Green){
+            signal = TrafficSignal.Yellow;
+            GetComponent<Renderer>().material = yellowLight;
+            gameObject.layer = 9; // Raycast layer
+            Invoke("SwitchToRed", yellowSignalTimer);
+        }
     }
+
 
     public void OpenTraffic()
     {

@@ -20,11 +20,13 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        // Adjust speed to ideal speed
-        if(speed < IdealSpeed())
+        float idealSpeed = IdealSpeed();
+        // If required, adjust speed to ideal speed
+        if(speed < idealSpeed)
         {
             SpeedUp();
-        } else if (speed > IdealSpeed())
+        } 
+        else if (speed > idealSpeed)
         {
             SlowDown();
         }
@@ -50,6 +52,27 @@ public class CarController : MonoBehaviour
             {
                 hit = hits[i];
                 break;
+            }
+            else if (ReferenceEquals(hits[i].collider.gameObject, path.trafficLight.gameObject))
+            {
+                TrafficLight trafficLight = hits[i].collider.gameObject.GetComponent<TrafficLight>();
+                if(trafficLight.GetSignal() == TrafficLight.TrafficSignal.Yellow)
+                {
+                    // If able to stop before signal then use this as next obstacle
+                    // Otherwise ignore to skip and use the next object
+                    // stopping distance = -(initial velocity)^2 / 2*acceleration
+                    float stoppingDistance = (-Mathf.Pow(speed, 2)) / (2 * acceleration);
+                    if (hits[i].distance > stoppingDistance)
+                    {
+                        hit = hits[i];
+                        break;
+                    }
+                }
+                else
+                {
+                    hit = hits[i];
+                    break;
+                }
             }
         }
 

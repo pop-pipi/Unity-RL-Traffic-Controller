@@ -10,6 +10,7 @@ public class CarSpawner : MonoBehaviour
     public float carMaxSpeed;
     public float carAcceleration; // Accelleration rate for accelarating & decellerating
     public float idealSpaceBetweenCars;
+    public IntersectionController intersection;
 
     void Start()
     {
@@ -46,6 +47,12 @@ public class CarSpawner : MonoBehaviour
         carController.maxSpeed = carMaxSpeed;
         carController.path = path;
         carController.idealSpaceToCarAhead = idealSpaceBetweenCars;
+        
+        // add new car to path
+        carController.path.addCar();
+
+        //add new car to intersection
+        intersection.cars.Add(carController);
     }
 
 }

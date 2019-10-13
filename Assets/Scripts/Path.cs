@@ -5,6 +5,7 @@ using UnityEngine;
 public class Path : MonoBehaviour
 {
 
+    private int numcars = 0;
     public TrafficLight trafficLight;
     public Transform[] waypoints;
 
@@ -23,6 +24,18 @@ public class Path : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         spawnOccupied = false;
+    }
+
+    public int getNumCars(){
+        return numcars;
+    }
+
+    public void addCar(){
+        numcars += 1;
+    }
+
+    public void removeCar(){
+        numcars -= 1;
     }
 
 }
