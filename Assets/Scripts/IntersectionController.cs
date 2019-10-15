@@ -5,6 +5,7 @@ public class IntersectionController : MonoBehaviour
     public float yellowSignalTimer;
     public float timeBetweenConfigs;
     public TrafficConfiguration[] configurations;
+    public CarSpawner carSpawner;
 
     // TODO: Review OBS REFERENCES
     public TrafficPath[] paths;
@@ -27,6 +28,16 @@ public class IntersectionController : MonoBehaviour
                 config.trafficLights[a].yellowSignalTimer = yellowSignalTimer;
             }
         }
+    }
+
+    // Change traffic config after max time
+    void FixedUpdate()
+    {
+        /*
+        if(Time.time - startedCurrentConfig > 10)
+        {
+            GetComponent<IntersectionAgent>().RequestDecision();
+        } */
     }
 
     public void SwitchTrafficConfiguration(int index)
@@ -64,5 +75,20 @@ public class IntersectionController : MonoBehaviour
     public float getTimeInCurrentConfig()
     {
         return Time.time - startedCurrentConfig;
+    }
+
+    public void resetIntersection()
+    {
+        // Close traffic in all lanes
+        changingConfigurations = true;
+        currentConfig = -1;
+        foreach (TrafficConfiguration configuration in configurations)
+        {
+            foreach (TrafficLight trafficLight in configuration.trafficLights)
+            {
+                trafficLight.CloseTraffic();
+            }
+        }
+        changingConfigurations = false;
     }
 }

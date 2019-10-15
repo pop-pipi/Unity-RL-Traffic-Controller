@@ -38,6 +38,7 @@ public class TrafficLight : MonoBehaviour
 
     private void SwitchToRed()
     {
+        gameObject.layer = 9; // Raycast layer
         signal = TrafficSignal.Red;
         GetComponent<Renderer>().material = redLight;
     }

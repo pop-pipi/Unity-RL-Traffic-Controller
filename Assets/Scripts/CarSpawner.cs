@@ -6,6 +6,7 @@ public class CarSpawner : MonoBehaviour
 {
     public IntersectionAgent agent;
 
+    public List<CarController> cars = new List<CarController>();
     public GameObject carPrefab;
     public TrafficPath[] paths;
     public float spawnRate; // Seconds between each car spawn
@@ -48,12 +49,14 @@ public class CarSpawner : MonoBehaviour
         carController.maxSpeed = carMaxSpeed;
         carController.path = path;
         carController.idealSpaceToCarAhead = idealSpaceBetweenCars;
+        carController.parent = this;
+        cars.Add(carController);
+
 
         // TODO: Review ADD TO OBS VALUE
         path.noCars += 1;
 
-        // Request decision to be made
-        agent.RequestDecision();
+        //agent.RequestDecision();
     }
 
 }

@@ -3,12 +3,15 @@ using System.Linq;
 
 public class CarController : MonoBehaviour
 {
+    public CarSpawner parent;
     public TrafficPath path;
     public float maxSpeed; // distance units per second
     public float maxAcceleration; // change in velocity per second
     public float speed;
     public float acceleration;
     public float idealSpaceToCarAhead; // distance units between car to any obj infront
+
+    public float timeStopped;
 
     private int nextWaypointIndex;
 
@@ -52,10 +55,11 @@ public class CarController : MonoBehaviour
                 break;
 
             }
-            else if (ReferenceEquals(hits[i].collider.gameObject, path.trafficLight.gameObject))
+
+            if (ReferenceEquals(hits[i].collider.gameObject, path.trafficLight.gameObject))
             {
                 TrafficLight trafficLight = hits[i].collider.gameObject.GetComponent<TrafficLight>();
-                if(trafficLight.GetSignal() == TrafficLight.TrafficSignal.Yellow)
+                if (trafficLight.GetSignal() == TrafficLight.TrafficSignal.Yellow)
                 {
                     // If able to stop before signal then use this as next obstacle
                     // Otherwise ignore to skip and use the next object
@@ -121,9 +125,10 @@ public class CarController : MonoBehaviour
 
 	private void GoToNextWaypoint()
 	{
-		// Delete self if end of path
-		if (nextWaypointIndex >= path.waypoints.Length)
+        // Delete self if end of path
+        if (nextWaypointIndex >= path.waypoints.Length)
 		{
+            parent.cars.Remove(this);
             Destroy(gameObject);
             path.noCars -= 1;
 			return;
@@ -170,6 +175,11 @@ public class CarController : MonoBehaviour
         {
             speed = maxSpeed;
         }
+
+        if (System.Math.Abs(timeStopped) > 0)
+        {
+            timeStopped = 0;
+        }
     }
 
     private void SlowDown()
@@ -178,6 +188,7 @@ public class CarController : MonoBehaviour
         speed -= acceleration * Time.deltaTime;
         if (speed < 0)
         {
+            timeStopped = Time.time;
             speed = 0;
         }
     }
@@ -185,6 +196,17 @@ public class CarController : MonoBehaviour
     private void DidCrash()
     {
         Debug.Log("Car did crash");
+    }
+
+    public float TimeSinceStop()
+    {
+        if (System.Math.Abs(timeStopped) > 0)
+        {
+            return Time.time - timeStopped;
+        } else
+        {
+            return 0;
+        }
     }
 
 }
