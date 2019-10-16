@@ -9,6 +9,7 @@ public class IntersectionController : MonoBehaviour
     public float timeBetweenConfigs;
     public TrafficConfiguration[] configurations;
     public ArrayList cars = new ArrayList();
+    private int currentConfig;
 
     // ml agents stuff
     // private bool changingConfigurations;
@@ -18,6 +19,7 @@ public class IntersectionController : MonoBehaviour
     // Set all traffic light yellow signal lengths
     void Start()
     {
+        setCurrentConfig(9);
         for (int i = 0; i < configurations.Length; i++)
         {
             TrafficConfiguration config = configurations[i];
@@ -31,30 +33,38 @@ public class IntersectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < configurations.Length; i++)
-        {
-            if(Input.anyKeyDown) {
-                if (Input.inputString == i.ToString())
+        // check if agent is changing a new traffic config or remain the same config
+        if(Input.anyKeyDown){
+            Debug.Log("Player pressed: " + Input.inputString);
+            if(getCurrentConfig() != Input.inputString){
+                for (int i = 0; i < configurations.Length; i++)
                 {
-
-                    // Close traffic in all lanes
-                    foreach (TrafficConfiguration configuration in configurations)
+                    if (Input.inputString == i.ToString())
                     {
-                        foreach (TrafficLight trafficLight in configuration.trafficLights)
+                        // Close traffic in all lanes
+                        foreach (TrafficConfiguration configuration in configurations)
                         {
-                            trafficLight.CloseTraffic();
+                            foreach (TrafficLight trafficLight in configuration.trafficLights)
+                            {
+                                trafficLight.CloseTraffic();
+                            }
+                            
                         }
-                        
-                    }
 
-                    // Open traffic in lanes selected by User
-                    // TODO: Set to open AFTER a specfied time
-                    foreach (TrafficLight trafficLight in configurations[i].trafficLights)
-                    {
-                        trafficLight.Invoke("OpenTraffic", timeBetweenConfigs);
+                        // Open traffic in lanes selected by User
+                        foreach (TrafficLight trafficLight in configurations[i].trafficLights)
+                        {
+                            trafficLight.Invoke("OpenTraffic", timeBetweenConfigs);
+                        }
+                        Debug.Log("Waiting cars: " + getQueueLength());
+                        
+
+                        // Update our current config
+                        setCurrentConfig(i);
+
+                        return;
                     }
-                    Debug.Log("Waiting cars: " + getQueueLength());
-                    return;
+                    
                 }
             }
         }
@@ -101,5 +111,14 @@ public class IntersectionController : MonoBehaviour
             }
         }
         return waitingcars;
+    }
+
+    public string getCurrentConfig(){
+        return currentConfig.ToString();
+    }
+
+    public void setCurrentConfig(int change){
+        currentConfig = change;
+        Debug.Log("changed current config to: " + getCurrentConfig());
     }
 }
