@@ -3,7 +3,7 @@ using System.Linq;
 
 public class CarController : MonoBehaviour
 {
-    public Path path;
+    public TrafficPath path;
     public float maxSpeed; // distance units per second
     public float maxAcceleration; // change in velocity per second
     public float speed;

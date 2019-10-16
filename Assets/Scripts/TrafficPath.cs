@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Path : MonoBehaviour
+public class TrafficPath : MonoBehaviour
 {
 
     private int numcars = 0;

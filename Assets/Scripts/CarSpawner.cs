@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public GameObject carPrefab;
-    public Path[] paths;
+    public TrafficPath[] paths;
     public float spawnRate; // Seconds between each car spawn
     public float carMaxSpeed;
     public float carAcceleration; // Accelleration rate for accelarating & decellerating
@@ -22,7 +22,7 @@ public class CarSpawner : MonoBehaviour
     {
         // Get free paths
         ArrayList openPaths = new ArrayList();
-        foreach (Path p in paths) {
+        foreach (TrafficPath p in paths) {
             if (!p.IsSpawnOccupied())
             {
                 openPaths.Add(p);
@@ -38,7 +38,7 @@ public class CarSpawner : MonoBehaviour
         // Assign random open spawn
         System.Random rnd = new System.Random();
         int spawnIndex = rnd.Next(openPaths.Count);
-        Path path = (Path) openPaths[spawnIndex];
+        TrafficPath path = (TrafficPath) openPaths[spawnIndex];
 
         // Instantiate car and set parameters
         var car = Instantiate(carPrefab, path.transform.position, Quaternion.identity);
