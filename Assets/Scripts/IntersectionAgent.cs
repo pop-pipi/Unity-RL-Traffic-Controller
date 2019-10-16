@@ -6,6 +6,8 @@ public class IntersectionAgent : Agent
     IntersectionController intersection;
     CarSpawner carSpawner;
 
+    private int phaseNumber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,24 +41,32 @@ public class IntersectionAgent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        // Actions
-        intersection.SwitchTrafficConfiguration((int)vectorAction[0]); // Chosen configuration
-        float timeOnConfig = vectorAction[1]; // Chosen length of configuration
-        Invoke("RequestDecision", timeOnConfig);
-        Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: "+timeOnConfig);
+        if (phaseNumber < 4)
+        {
+            // Actions
+            intersection.SwitchTrafficConfiguration((int)vectorAction[0]); // Chosen configuration
+            float timeOnConfig = vectorAction[1]; // Chosen length of configuration
+            Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: " + timeOnConfig);
 
-        // Reward
-        float totalWait = 0;
-        foreach (CarController car in carSpawner.cars)
+            // Reward
+            float totalWait = 0;
+            foreach (CarController car in carSpawner.cars)
+            {
+                totalWait += car.TimeSinceStop();
+            }
+            float avgWait = totalWait / carSpawner.cars.Count;
+            if (float.IsNaN(avgWait))
+            {
+                avgWait = 0;
+            }
+            AddReward((float)(-avgWait * 0.0005));
+            Invoke("RequestDecision", timeOnConfig);
+            phaseNumber += 1;
+        } else
         {
-            totalWait += car.TimeSinceStop();
+            Done();
         }
-        float avgWait = totalWait / carSpawner.cars.Count;
-        if (float.IsNaN(avgWait))
-        {
-            avgWait = 0;
-        }
-        AddReward((float)(-avgWait * 0.0005));
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -67,6 +77,14 @@ public class IntersectionAgent : Agent
     public override void AgentOnDone()
     {
         Debug.Log("Agent Done");
-        intersection.resetIntersection();
+        //intersection.resetIntersection();
+        RequestDecision();
+    }
+
+    public override void AgentReset()
+    {
+        Debug.Log("Agent Reset");
+        phaseNumber = 0;
+        RequestDecision();
     }
 }
