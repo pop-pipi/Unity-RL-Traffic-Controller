@@ -11,7 +11,7 @@ public class CarController : MonoBehaviour
     public float acceleration;
     public float idealSpaceToCarAhead; // distance units between car to any obj infront
 
-    public float timeStopped;
+    public double timeStopped;
 
     private int nextWaypointIndex;
 
@@ -176,10 +176,7 @@ public class CarController : MonoBehaviour
             speed = maxSpeed;
         }
 
-        if (System.Math.Abs(timeStopped) > 0)
-        {
-            timeStopped = 0;
-        }
+        timeStopped = 0.0;
     }
 
     private void SlowDown()
@@ -200,13 +197,11 @@ public class CarController : MonoBehaviour
 
     public float TimeSinceStop()
     {
-        if (System.Math.Abs(timeStopped) > 0)
-        {
-            return Time.time - timeStopped;
-        } else
+        if (timeStopped == 0.0)
         {
             return 0;
         }
+        return (float)(Time.time - timeStopped);
     }
 
 }

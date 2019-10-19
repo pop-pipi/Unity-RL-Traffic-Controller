@@ -9,6 +9,7 @@ public class IntersectionController : MonoBehaviour
 
     // TODO: Review OBS REFERENCES
     public TrafficPath[] paths;
+    public WireLoopSensor[] wireLoops;
 
     private bool changingConfigurations;
     public int currentConfig;
@@ -28,16 +29,6 @@ public class IntersectionController : MonoBehaviour
                 config.trafficLights[a].yellowSignalTimer = yellowSignalTimer;
             }
         }
-    }
-
-    // Change traffic config after max time
-    void FixedUpdate()
-    {
-        /*
-        if(Time.time - startedCurrentConfig > 10)
-        {
-            GetComponent<IntersectionAgent>().RequestDecision();
-        } */
     }
 
     public void SwitchTrafficConfiguration(int index)

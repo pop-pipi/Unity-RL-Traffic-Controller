@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: IntersectionBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 16
-    numStackedVectorObservations: 1
+    vectorObservationSize: 20
+    numStackedVectorObservations: 2
     vectorActionSize: 080000001e000000
     cameraResolutions: []
     vectorActionDescriptions:
     - 
     - 
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: 11400000, guid: 3ec4d985e74a449e68514ebbf9c7f6d6, type: 3}
   inferenceDevice: 0

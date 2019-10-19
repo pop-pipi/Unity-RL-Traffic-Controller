@@ -3,8 +3,9 @@ using MLAgents;
 
 public class IntersectionAgent : Agent
 {
-    IntersectionController intersection;
-    CarSpawner carSpawner;
+    public int episodeLength;
+    public IntersectionController intersection;
+    public CarSpawner carSpawner;
 
     private int phaseNumber;
 
@@ -18,13 +19,31 @@ public class IntersectionAgent : Agent
 
     public override void CollectObservations()
     {
+        // Debug printing included
+        foreach (WireLoopSensor wireLoop in intersection.wireLoops)
+        {
+            
+            if (wireLoop.GetTimeActivated() == 0.0)
+            {
+                AddVectorObs(0);
+            } else
+            {
+                AddVectorObs(1);
+            } 
+
+            //AddVectorObs((float)wireLoop.GetTimeActivated());
+        }
+
+
+        /*
+        // No cars per lane, normalized from max cars
+
         float totalNumCars = 0;
         foreach (TrafficPath path in intersection.paths)
         {
             totalNumCars += path.noCars;
         }
 
-        // No cars per lane, normalized from max cars
         foreach (TrafficPath path in intersection.paths)
         {
             float nvalue = 0;
@@ -33,34 +52,24 @@ public class IntersectionAgent : Agent
                 nvalue = path.noCars / totalNumCars;
             }
             AddVectorObs(nvalue);
-        }
+        } */
+
         // Current traffic configuration
-        AddVectorObs(intersection.currentConfig);
-        AddVectorObs(intersection.getTimeInCurrentConfig());
+        //AddVectorObs(intersection.currentConfig);
+        //AddVectorObs(intersection.getTimeInCurrentConfig());
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        if (phaseNumber < 4)
+        if (phaseNumber < episodeLength)
         {
             // Actions
             intersection.SwitchTrafficConfiguration((int)vectorAction[0]); // Chosen configuration
-            float timeOnConfig = vectorAction[1]; // Chosen length of configuration
-            Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: " + timeOnConfig);
+            float timeGreen = vectorAction[1]; // Chosen length of configuration
+            Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: " + timeGreen);
 
             // Reward
-            float totalWait = 0;
-            foreach (CarController car in carSpawner.cars)
-            {
-                totalWait += car.TimeSinceStop();
-            }
-            float avgWait = totalWait / carSpawner.cars.Count;
-            if (float.IsNaN(avgWait))
-            {
-                avgWait = 0;
-            }
-            AddReward((float)(-avgWait * 0.0005));
-            Invoke("RequestDecision", timeOnConfig);
+            Invoke("FinishAction", timeGreen);
             phaseNumber += 1;
         } else
         {
@@ -74,15 +83,26 @@ public class IntersectionAgent : Agent
         AddReward(0.05f);
     }
 
-    public override void AgentOnDone()
+    private void FinishAction()
     {
-        Debug.Log("Agent Done");
-        //intersection.resetIntersection();
+        float totalWait = 0;
+        foreach (CarController car in carSpawner.cars)
+        {
+            totalWait += car.TimeSinceStop();
+        }
+        float avgWait = totalWait / carSpawner.cars.Count;
+        if (float.IsNaN(avgWait))
+        {
+            avgWait = 0;
+        }
+        AddReward((float)(-avgWait * 0.0005));
+        Debug.Log("Reward for step: " + GetReward());
         RequestDecision();
     }
 
     public override void AgentReset()
     {
+        Debug.Log("Reward for episode: " + GetCumulativeReward());
         Debug.Log("Agent Reset");
         phaseNumber = 0;
         RequestDecision();

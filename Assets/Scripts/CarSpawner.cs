@@ -22,25 +22,23 @@ public class CarSpawner : MonoBehaviour
 
     private void SpawnCar()
     {
+        
         // Get free paths
-        ArrayList openPaths = new ArrayList();
+        ArrayList pathList = new ArrayList();
         foreach (TrafficPath p in paths) {
-            if (!p.IsSpawnOccupied())
-            {
-                openPaths.Add(p);
-            }
+            pathList.Add(p);
         }
 
-        // If no open spawns return
-        if(openPaths.Count == 0)
+        // Assign random spawn point
+        System.Random rnd = new System.Random();
+        int spawnIndex = rnd.Next(pathList.Count);
+        TrafficPath path = (TrafficPath) pathList[spawnIndex];
+
+        // if spawn point not open do not spawn
+        if(path.IsSpawnOccupied())
         {
             return;
         }
-
-        // Assign random open spawn
-        System.Random rnd = new System.Random();
-        int spawnIndex = rnd.Next(openPaths.Count);
-        TrafficPath path = (TrafficPath) openPaths[spawnIndex];
 
         // Instantiate car and set parameters
         var car = Instantiate(carPrefab, path.transform.position, Quaternion.identity);

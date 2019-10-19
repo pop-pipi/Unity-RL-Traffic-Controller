@@ -112,6 +112,249 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &69038045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 121.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &69038046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 69038045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &92113426
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 121.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.189999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &92113427 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 92113426}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &125245441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &125245442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 125245441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &141666195 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4530668899779231195, guid: f77cf27800bf6460993d535d34e06e53,
@@ -122,6 +365,87 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &150596373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &150596374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 150596373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &170076733
@@ -193,6 +517,168 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &195147597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 134.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &195147598 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 195147597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &263097523
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 118.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &263097524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 263097523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516317939
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +734,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &645326021
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 117.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &645326022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 645326021}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &778380997 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4530668900216781965, guid: f77cf27800bf6460993d535d34e06e53,
@@ -270,6 +837,87 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &850389471
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 114.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &850389472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 850389471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &938127214 stripped
@@ -317,8 +965,7 @@ MonoBehaviour:
     broadcastingBrains:
     - {fileID: 11400000, guid: 15236c85ac9b347769bb2d3f6ae32426, type: 2}
     - {fileID: 11400000, guid: 75f1f2c798291409b867c4c38e02595b, type: 2}
-    m_BrainsToControl:
-    - {fileID: 11400000, guid: 75f1f2c798291409b867c4c38e02595b, type: 2}
+    m_BrainsToControl: []
   m_TrainingConfiguration:
     width: 80
     height: 80
@@ -383,6 +1030,168 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f225a29b51ae747dbb50884db9d3f055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1109991202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1109991203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1109991202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1152599295
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1152599296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1152599295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1186903827 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4530668900623265115, guid: f77cf27800bf6460993d535d34e06e53,
@@ -395,6 +1204,411 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1288659191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 124.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1288659192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1288659191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1340086677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1340086678 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340086677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1469090996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 134.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1469090997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1469090996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1501043475
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1501043476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501043475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1588429847
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1588429848 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1588429847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1604367611 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4530668900505956019, guid: f77cf27800bf6460993d535d34e06e53,
@@ -405,6 +1619,87 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1621714429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 124.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.189999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1621714430 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621714429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1756301306 stripped
@@ -441,6 +1736,87 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb3396084a5a84e6688b21471d457b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1964860626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &1964860627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1964860626}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1977966826
@@ -525,6 +1901,249 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1001 &2103869465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &2103869466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2103869465}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &2145938244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 118.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.189999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &2145938245 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2145938244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &819187687820553451
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7508585553555598589, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_Name
+      value: Wire Loop Sensor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 114.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614631400934296631, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a099ebd413c2648899ed0a8fa67b7ebe, type: 3}
+--- !u!114 &819187687820553452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939826885647061431, guid: a099ebd413c2648899ed0a8fa67b7ebe,
+    type: 3}
+  m_PrefabInstance: {fileID: 819187687820553451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524daed534c114f028a28948f9dac3f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4530668899644054088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,6 +2322,111 @@ PrefabInstance:
       propertyPath: spawnRate
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.size
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[0]
+      value: 
+      objectReference: {fileID: 819187687820553452}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[1]
+      value: 
+      objectReference: {fileID: 645326022}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[2]
+      value: 
+      objectReference: {fileID: 1964860627}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[3]
+      value: 
+      objectReference: {fileID: 2103869466}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[4]
+      value: 
+      objectReference: {fileID: 850389472}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[5]
+      value: 
+      objectReference: {fileID: 1340086678}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[6]
+      value: 
+      objectReference: {fileID: 69038046}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[7]
+      value: 
+      objectReference: {fileID: 1288659192}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[8]
+      value: 
+      objectReference: {fileID: 263097524}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[9]
+      value: 
+      objectReference: {fileID: 2145938245}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[10]
+      value: 
+      objectReference: {fileID: 92113427}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[11]
+      value: 
+      objectReference: {fileID: 1621714430}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[12]
+      value: 
+      objectReference: {fileID: 125245442}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[13]
+      value: 
+      objectReference: {fileID: 1469090997}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[14]
+      value: 
+      objectReference: {fileID: 195147598}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[15]
+      value: 
+      objectReference: {fileID: 1152599296}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[16]
+      value: 
+      objectReference: {fileID: 1501043476}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[17]
+      value: 
+      objectReference: {fileID: 1109991203}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[18]
+      value: 
+      objectReference: {fileID: 1588429848}
+    - target: {fileID: 4530668900683364480, guid: f77cf27800bf6460993d535d34e06e53,
+        type: 3}
+      propertyPath: wireLoops.Array.data[19]
+      value: 
+      objectReference: {fileID: 150596374}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77cf27800bf6460993d535d34e06e53, type: 3}
 --- !u!114 &5110536668192378383 stripped
