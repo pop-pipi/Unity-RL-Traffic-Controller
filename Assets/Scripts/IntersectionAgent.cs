@@ -1,17 +1,22 @@
 ﻿using UnityEngine;
 using MLAgents;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
 
 public class IntersectionAgent : Agent
 {
     public int episodeLength;
     public IntersectionController intersection;
     public CarSpawner carSpawner;
+    private List<string[]> rowData = new List<string[]>();
 
     private int phaseNumber;
 
     // Start is called before the first frame update
     void Start()
     {
+        CreateHeaderRow();
         intersection = GetComponent<IntersectionController>();
         carSpawner = intersection.carSpawner;
         RequestDecision();
@@ -63,7 +68,7 @@ public class IntersectionAgent : Agent
 
     private void OnTriggerExit(Collider other)
     {
-        //AddReward(0.05f);
+        AppendToCSV();
     }
 
     private void FinishAction()
@@ -90,5 +95,50 @@ public class IntersectionAgent : Agent
         Debug.Log("Agent Reset");
         phaseNumber = 0;
         RequestDecision();
+    }
+
+    void CreateHeaderRow()
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = "Timestamp";
+        rowData.Add(rowDataTemp);
+
+    }
+
+    void AppendToCSV()
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = "" + Time.time; // time stamp
+        rowData.Add(rowDataTemp);
+    }
+
+    void OnApplicationQuit()
+    {
+        string[][] output = new string[rowData.Count][];
+
+        for (int i = 0; i < output.Length; i++)
+        {
+            output[i] = rowData[i];
+        }
+
+        int length = output.GetLength(0);
+        string delimiter = ",";
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int index = 0; index < length; index++)
+            sb.AppendLine(string.Join(delimiter, output[index]));
+
+
+        string filePath = GetCSVPath();
+
+        StreamWriter outStream = System.IO.File.CreateText(filePath);
+        outStream.WriteLine(sb);
+        outStream.Close();
+    }
+
+    string GetCSVPath()
+    {
+        return Application.dataPath + "/comparisons/" + "mlagent.csv";
     }
 }

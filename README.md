@@ -1,6 +1,16 @@
 # Unity-RL-Traffic-Controller
 Unity based traffic simulator. A learning environment for a reinforcement learning agent to control traffic lights at a single intersection, training to maximise traffic flow.
 
+
+## Running the simulation
+
+### Requiements
+* ML Agents
+* 
+
+
+## Running from Unity
+
 ### Requirements
 * Unity (Project requires version 2018.4.10f1 or above)
 * Git Large File Storage (Git LFS) (https://github.com/git-lfs/git-lfs/wiki/Installation)

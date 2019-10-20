@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using UnityEngine;
 
 public class StaticTrafficController : MonoBehaviour
 {
     public float yellowSignalTimer;
     public float allRedSignalTimer;
     public float[] trafficConfigTimers;
+    private List<string[]> rowData = new List<string[]>();
 
     public WireLoopSensor[] woodlandsRightWireLoops;
     public WireLoopSensor[] napierRightWireLoops;
@@ -17,6 +21,8 @@ public class StaticTrafficController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        CreateHeaderRow();
+
         intersection = GetComponent<IntersectionController>();
 
         int index = currentConfigSelection;
@@ -72,5 +78,55 @@ public class StaticTrafficController : MonoBehaviour
             currentConfigSelection = 0;
         }
         Invoke("SwitchConfig", timeGreen + yellowSignalTimer + allRedSignalTimer);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        AppendToCSV();
+    }
+
+    void CreateHeaderRow()
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = "Timestamp";
+        rowData.Add(rowDataTemp);
+
+    }
+
+    void AppendToCSV()
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = ""+Time.time; // time stamp
+        rowData.Add(rowDataTemp);
+    }
+
+    void OnApplicationQuit()
+    {
+        string[][] output = new string[rowData.Count][];
+
+        for (int i = 0; i < output.Length; i++)
+        {
+            output[i] = rowData[i];
+        }
+
+        int length = output.GetLength(0);
+        string delimiter = ",";
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int index = 0; index < length; index++)
+            sb.AppendLine(string.Join(delimiter, output[index]));
+
+
+        string filePath = GetCSVPath();
+
+        StreamWriter outStream = System.IO.File.CreateText(filePath);
+        outStream.WriteLine(sb);
+        outStream.Close();
+    }
+
+    string GetCSVPath()
+    {
+        return Application.dataPath + "/comparisons/" + "static.csv";
     }
 }
