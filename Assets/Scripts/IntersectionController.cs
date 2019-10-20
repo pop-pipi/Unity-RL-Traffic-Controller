@@ -12,7 +12,7 @@ public class IntersectionController : MonoBehaviour
     public WireLoopSensor[] wireLoops;
 
     private bool changingConfigurations;
-    public int currentConfig;
+    public int currentConfig = -1;
 
     private float startedCurrentConfig;
 
@@ -47,12 +47,13 @@ public class IntersectionController : MonoBehaviour
                 }
             }
 
-            // Open traffic in lanes selected by User
+            // Open traffic in lanes selected by User after yellow timer done
             foreach (TrafficLight trafficLight in configurations[index].trafficLights)
             {
-                trafficLight.Invoke("OpenTraffic", timeBetweenConfigs);
-                Invoke("FinishedChangingConfig", timeBetweenConfigs);
+                trafficLight.Invoke("OpenTraffic", timeBetweenConfigs+yellowSignalTimer);
             }
+            Invoke("FinishedChangingConfig", timeBetweenConfigs+yellowSignalTimer);
+
             return;
         }
     }

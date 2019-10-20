@@ -1,0 +1,25 @@
+default:
+    trainer: sac
+    batch_size: 64
+    buffer_size: 50000 # larger for sac
+    buffer_init_steps: 1000 # larger for sac
+    init_entcoef: 0.25 # For discrete actions, recommended is 0.05-0.5
+    learning_rate: 3.0e-4
+    learning_rate_schedule: constant
+    max_steps: 2e6
+    normalize: false
+    num_update: 1
+    train_interval: 1
+    num_layers: 1 # Simplicity
+    hidden_units: 11 # Mean avg, between input signals (20) to output (2)
+    time_horizon: 4 # For SAC, set to episode length
+    summary_freq: 1000
+    tau: 0.005
+    use_recurrent: false
+    vis_encode_type: simple
+    sequence_length: 64 # not used when not recurrent
+    memory_size: 256 # not used when not recurrent
+    reward_signals:
+        extrinsic:
+            strength: 1.0
+            gamma: 0.8 # Lower than default to seek present reward

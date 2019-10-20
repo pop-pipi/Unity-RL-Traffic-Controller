@@ -33,43 +33,26 @@ public class IntersectionAgent : Agent
 
             //AddVectorObs((float)wireLoop.GetTimeActivated());
         }
-
-
-        /*
-        // No cars per lane, normalized from max cars
-
-        float totalNumCars = 0;
-        foreach (TrafficPath path in intersection.paths)
-        {
-            totalNumCars += path.noCars;
-        }
-
-        foreach (TrafficPath path in intersection.paths)
-        {
-            float nvalue = 0;
-            if (System.Math.Abs(totalNumCars) > 0)
-            {
-                nvalue = path.noCars / totalNumCars;
-            }
-            AddVectorObs(nvalue);
-        } */
-
-        // Current traffic configuration
-        //AddVectorObs(intersection.currentConfig);
-        //AddVectorObs(intersection.getTimeInCurrentConfig());
     }
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+        float timeGreen = vectorAction[1]; // Chosen length of configuration
+
         if (phaseNumber < episodeLength)
         {
-            // Actions
-            intersection.SwitchTrafficConfiguration((int)vectorAction[0]); // Chosen configuration
-            float timeGreen = vectorAction[1]; // Chosen length of configuration
-            Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: " + timeGreen);
+            if (intersection.currentConfig == (int)vectorAction[0])
+            {
+                Invoke("FinishAction", timeGreen);
+            }
+            else
+            {
+                Invoke("FinishAction", timeGreen + intersection.yellowSignalTimer + intersection.timeBetweenConfigs);
+            }
 
-            // Reward
-            Invoke("FinishAction", timeGreen);
+            // Switch traffic config
+            intersection.SwitchTrafficConfiguration((int)vectorAction[0]); // Chosen configuration
+            Debug.Log("Decision made: " + (int)vectorAction[0] + ", over time: " + timeGreen);
             phaseNumber += 1;
         } else
         {
@@ -80,7 +63,7 @@ public class IntersectionAgent : Agent
 
     private void OnTriggerExit(Collider other)
     {
-        AddReward(0.05f);
+        //AddReward(0.05f);
     }
 
     private void FinishAction()
@@ -95,7 +78,8 @@ public class IntersectionAgent : Agent
         {
             avgWait = 0;
         }
-        AddReward((float)(-avgWait * 0.0005));
+        //AddReward((float)(-avgWait * 0.0005));
+        AddReward((float)(-avgWait * 0.01));
         Debug.Log("Reward for step: " + GetReward());
         RequestDecision();
     }
