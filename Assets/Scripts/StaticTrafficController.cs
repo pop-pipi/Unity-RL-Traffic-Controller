@@ -35,6 +35,7 @@ public class StaticTrafficController : MonoBehaviour
 
     void SwitchConfig()
     {
+        Debug.Log("Switching Config");
         int index = currentConfigSelection;
         currentConfigSelection += 1;
         float timeGreen = trafficConfigTimers[index];
@@ -66,18 +67,20 @@ public class StaticTrafficController : MonoBehaviour
             }
         }
 
+        if (currentConfigSelection >= trafficConfigTimers.Length)
+        {
+            currentConfigSelection = 0;
+        }
+
         // If not active, skip this config to the next section
+
         if (skipConfig)
         {
             SwitchConfig();
             return;
         }
-
         intersection.SwitchTrafficConfiguration(index);
-        if(currentConfigSelection >= trafficConfigTimers.Length)
-        {
-            currentConfigSelection = 0;
-        }
+
         Invoke("SwitchConfig", timeGreen + yellowSignalTimer + allRedSignalTimer);
     }
 

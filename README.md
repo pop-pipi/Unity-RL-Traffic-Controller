@@ -27,7 +27,7 @@ This repository provides two simlulation scenes and a pretrained agent 'Intersec
 
 ### Running the Comparison Scene
 - Run the comparison_simulation from the project folder (double click)
-- The machine learning agent controls the left environment, while the static controller is employed on the right. The timescale for the simulation is increased roughly by a factor of 10.
+- The machine learning agent controls the left environment, while the static controller is employed on the right. The timescale for the simulation is increased roughly by a factor of 100.
 - On closing the simluator, four data sets are generated and saved into the Assets/comparisons/ folder, two for the static controller and two for the agent
     - Car travel time (Total length of time from spawn to path completion)
     - Car throughput (Each row hold a timestamp indicating when a car crossed the intersection)
