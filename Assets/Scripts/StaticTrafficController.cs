@@ -8,7 +8,8 @@ public class StaticTrafficController : MonoBehaviour
     public float yellowSignalTimer;
     public float allRedSignalTimer;
     public float[] trafficConfigTimers;
-    private List<string[]> rowData = new List<string[]>();
+    private List<string[]> carThroughPutData = new List<string[]>();
+    private List<string[]> carTravelTimeData = new List<string[]>();
 
     public WireLoopSensor[] woodlandsRightWireLoops;
     public WireLoopSensor[] napierRightWireLoops;
@@ -82,31 +83,58 @@ public class StaticTrafficController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        AppendToCSV();
+        AppendToCarThroughPut();
     }
 
     void CreateHeaderRow()
     {
         string[] rowDataTemp = new string[1];
         rowDataTemp[0] = "Timestamp";
-        rowData.Add(rowDataTemp);
+        carThroughPutData.Add(rowDataTemp);
+
+        string[] rowDataTemp2 = new string[1];
+        rowDataTemp2[0] = "Total Travel Time";
+        carTravelTimeData.Add(rowDataTemp2);
 
     }
 
-    void AppendToCSV()
+    void AppendToCarThroughPut()
     {
         string[] rowDataTemp = new string[1];
         rowDataTemp[0] = ""+Time.time; // time stamp
-        rowData.Add(rowDataTemp);
+        carThroughPutData.Add(rowDataTemp);
+    }
+
+    public void AppendToCarTravelTime(float time)
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = "" + time; // time travelled
+        carTravelTimeData.Add(rowDataTemp);
     }
 
     void OnApplicationQuit()
     {
-        string[][] output = new string[rowData.Count][];
+        saveCarThroughPutData();
+        saveCarTravelTimeData();
+    }
+
+    string GetCarThroughputPath()
+    {
+        return Application.dataPath + "/comparisons/" + "static_car_throughput.csv";
+    }
+
+    string GetCarTravelTimePath()
+    {
+        return Application.dataPath + "/comparisons/" + "static_car_travel_time.csv";
+    }
+
+    void saveCarTravelTimeData()
+    {
+        string[][] output = new string[carTravelTimeData.Count][];
 
         for (int i = 0; i < output.Length; i++)
         {
-            output[i] = rowData[i];
+            output[i] = carTravelTimeData[i];
         }
 
         int length = output.GetLength(0);
@@ -118,15 +146,35 @@ public class StaticTrafficController : MonoBehaviour
             sb.AppendLine(string.Join(delimiter, output[index]));
 
 
-        string filePath = GetCSVPath();
+        string filePath = GetCarTravelTimePath();
 
         StreamWriter outStream = System.IO.File.CreateText(filePath);
         outStream.WriteLine(sb);
         outStream.Close();
     }
 
-    string GetCSVPath()
+    void saveCarThroughPutData()
     {
-        return Application.dataPath + "/comparisons/" + "static.csv";
+        string[][] output = new string[carThroughPutData.Count][];
+
+        for (int i = 0; i < output.Length; i++)
+        {
+            output[i] = carThroughPutData[i];
+        }
+
+        int length = output.GetLength(0);
+        string delimiter = ",";
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int index = 0; index < length; index++)
+            sb.AppendLine(string.Join(delimiter, output[index]));
+
+
+        string filePath = GetCarThroughputPath();
+
+        StreamWriter outStream = System.IO.File.CreateText(filePath);
+        outStream.WriteLine(sb);
+        outStream.Close();
     }
 }

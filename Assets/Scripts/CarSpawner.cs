@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarSpawner : MonoBehaviour
 {
     public IntersectionAgent agent;
+    public StaticTrafficController staticController;
 
     public List<CarController> cars = new List<CarController>();
     public GameObject carPrefab;
@@ -48,6 +49,15 @@ public class CarSpawner : MonoBehaviour
         carController.path = path;
         carController.idealSpaceToCarAhead = idealSpaceBetweenCars;
         carController.parent = this;
+
+        if(agent != null)
+        {
+            carController.outputTravelTime |= agent.exportData;
+        } else if (staticController != null)
+        {
+            carController.outputTravelTime = true;
+        }
+
         cars.Add(carController);
 
 

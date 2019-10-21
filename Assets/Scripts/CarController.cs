@@ -10,6 +10,9 @@ public class CarController : MonoBehaviour
     public float speed;
     public float acceleration;
     public float idealSpaceToCarAhead; // distance units between car to any obj infront
+    public bool outputTravelTime;
+
+    private float totalTravelTime;
 
     public double timeStopped;
 
@@ -19,6 +22,7 @@ public class CarController : MonoBehaviour
     {
         FaceInitialWaypoint();
         speed = IdealSpeed();
+        totalTravelTime = Time.time;
     }
 
     void FixedUpdate()
@@ -128,6 +132,17 @@ public class CarController : MonoBehaviour
         // Delete self if end of path
         if (nextWaypointIndex >= path.waypoints.Length)
 		{
+            // If asked to output total travel time, callback to relevant parent
+            totalTravelTime = Time.time - totalTravelTime;
+            if (parent.agent != null)
+            {
+                parent.agent.AppendToCarTravelTime(totalTravelTime);
+            }
+            else if (parent.staticController != null)
+            {
+                parent.staticController.AppendToCarTravelTime(totalTravelTime);
+            }
+
             parent.cars.Remove(this);
             Destroy(gameObject);
             path.noCars -= 1;

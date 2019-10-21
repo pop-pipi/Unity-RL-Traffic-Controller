@@ -6,17 +6,23 @@ using System.IO;
 
 public class IntersectionAgent : Agent
 {
+    public bool exportData;
     public int episodeLength;
     public IntersectionController intersection;
     public CarSpawner carSpawner;
-    private List<string[]> rowData = new List<string[]>();
+    private List<string[]> carThroughPutData = new List<string[]>();
+    private List<string[]> carTravelTimeData = new List<string[]>();
 
     private int phaseNumber;
 
     // Start is called before the first frame update
     void Start()
     {
-        CreateHeaderRow();
+        if (exportData)
+        {
+            CreateHeaderRow();
+        }
+
         intersection = GetComponent<IntersectionController>();
         carSpawner = intersection.carSpawner;
         RequestDecision();
@@ -66,11 +72,6 @@ public class IntersectionAgent : Agent
 
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        AppendToCSV();
-    }
-
     private void FinishAction()
     {
         float totalWait = 0;
@@ -97,28 +98,68 @@ public class IntersectionAgent : Agent
         RequestDecision();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if(exportData == false)
+        {
+            return;
+        }
+        AppendToCarThroughPut();
+    }
+
     void CreateHeaderRow()
     {
         string[] rowDataTemp = new string[1];
         rowDataTemp[0] = "Timestamp";
-        rowData.Add(rowDataTemp);
+        carThroughPutData.Add(rowDataTemp);
+
+        string[] rowDataTemp2 = new string[1];
+        rowDataTemp2[0] = "Total Travel Time";
+        carTravelTimeData.Add(rowDataTemp2);
 
     }
 
-    void AppendToCSV()
+    void AppendToCarThroughPut()
     {
         string[] rowDataTemp = new string[1];
         rowDataTemp[0] = "" + Time.time; // time stamp
-        rowData.Add(rowDataTemp);
+        carThroughPutData.Add(rowDataTemp);
+    }
+
+    public void AppendToCarTravelTime(float time)
+    {
+        string[] rowDataTemp = new string[1];
+        rowDataTemp[0] = "" + time; // time travelled
+        carTravelTimeData.Add(rowDataTemp);
     }
 
     void OnApplicationQuit()
     {
-        string[][] output = new string[rowData.Count][];
+        if (exportData == false)
+        {
+            return;
+        }
+        saveCarThroughPutData();
+        saveCarTravelTimeData();
+    }
+
+    string GetCarThroughputPath()
+    {
+        return Application.dataPath + "/comparisons/" + "ml_car_throughput.csv";
+    }
+
+    string GetCarTravelTimePath()
+    {
+        return Application.dataPath + "/comparisons/" + "ml_car_travel_time.csv";
+    }
+
+    void saveCarTravelTimeData()
+    {
+        string[][] output = new string[carTravelTimeData.Count][];
 
         for (int i = 0; i < output.Length; i++)
         {
-            output[i] = rowData[i];
+            output[i] = carTravelTimeData[i];
         }
 
         int length = output.GetLength(0);
@@ -130,15 +171,35 @@ public class IntersectionAgent : Agent
             sb.AppendLine(string.Join(delimiter, output[index]));
 
 
-        string filePath = GetCSVPath();
+        string filePath = GetCarTravelTimePath();
 
         StreamWriter outStream = System.IO.File.CreateText(filePath);
         outStream.WriteLine(sb);
         outStream.Close();
     }
 
-    string GetCSVPath()
+    void saveCarThroughPutData()
     {
-        return Application.dataPath + "/comparisons/" + "mlagent.csv";
+        string[][] output = new string[carThroughPutData.Count][];
+
+        for (int i = 0; i < output.Length; i++)
+        {
+            output[i] = carThroughPutData[i];
+        }
+
+        int length = output.GetLength(0);
+        string delimiter = ",";
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int index = 0; index < length; index++)
+            sb.AppendLine(string.Join(delimiter, output[index]));
+
+
+        string filePath = GetCarThroughputPath();
+
+        StreamWriter outStream = System.IO.File.CreateText(filePath);
+        outStream.WriteLine(sb);
+        outStream.Close();
     }
 }
